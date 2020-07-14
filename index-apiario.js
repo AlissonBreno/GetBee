@@ -1,0 +1,1 @@
+let apiarioController = new apiarioController("form-apiario-create","form-apiario-update","table-apiario");
