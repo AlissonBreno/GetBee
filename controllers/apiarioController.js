@@ -37,15 +37,17 @@ class apiarioController{
 			//Inserindo os novos dados na linha TR editada
 			tr.innerHTML = `
 			<tr>
-			<td>${result._nome}</td>
-			<td>${result._especie}</td>
-			<td>${result._populacao}</td>
-			<td>${result._populacao}</td>
-			<td>${result._apicultor}</td>
-			<td>
-			<button type="button" class="btn btn-primary btn-edit btn-xs btn-flat">Editar</button>
-			<button type="button" class="btn btn-danger btn-xs btn-delete btn-flat">Excluir</button>
-			</td>
+				<td>${result._nome}</td>
+				<td>${result._especie}</td>
+				<td>${result._populacao}</td>
+				<td>${result._populacao}</td>
+				<td>${result._apicultor}</td>
+				<td>
+					<div class="acoes">
+						<button class="edit">editar</button>
+						<button class="delete">exluir</button>
+					</div>
+				</td>
 			</tr> 
 			`;     
 			this.addEventsTR(tr); 
