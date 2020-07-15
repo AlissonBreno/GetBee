@@ -3,12 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Raleway:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>GetBee</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <header>
+        <h1>CADASTRO DE APIÁRIOS</h1>
+    </header>
+    <div class="container">
+        <div class="form">
+            <form id="">
+                <div class="group-row">
+                    <div class="col-40">
+                        <label for="">Nome</label>
+                        <input type="text"></input> 
+                    </div>
+                    <div class="col-60">
+                        <label for="">Espécie Abelhas</label>
+                        <input type="text"></input>  
+                    </div>
+                </div>
+                <div class="group-row">
+                    <div class="col-30">
+                        <label for="">População</label>
+                        <input type="text"></input> 
+                    </div>
+                    <div class="col-70">
+                        <label for="">Apicultor</label>
+                        <input type="text"></input>  
+                    </div>
+                </div>
+                <div class="group-row">
+                    <div class="col-40">
+                        <label for="">Latitude</label>
+                        <input type="text"></input> 
+                    </div>
+                    <div class="col-60">
+                        <label for="">Longitude</label>
+                        <input type="text"></input>  
+                    </div>
+                </div>
+                <br>
+                <br>
+                <button class="submit" type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <div class="map-form">
+            <div class="map">
+
+            </div>
+            <div class="map-shadow"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="table">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Espécie</th>
+                            <th>Populacao</th>
+                            <th>Apicultor</th>
+                            <th style="text-align: center;">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <tr>
+                            <td>Singelo Cambuí</td>
+                            <td>Abelha Gigante</td>
+                            <td>4500</td>
+                            <td>Agusto Pena</td>
+                            <td>
+                                <div class="acoes">
+                                    <button class="edit">editar</button>
+                                    <button class="delete">exluir</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Singelo Cambuí</td>
+                            <td>Abelha Gigante</td>
+                            <td>4500</td>
+                            <td>Agusto Pena</td>
+                            <td class="acoes">
+                                    <button class="edit">editar</button>
+                                    <button class="delete">exluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                    
+            </div>
+        </div>
+    </div>
 </body>
 </html>
