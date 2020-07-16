@@ -13,35 +13,35 @@
     </header>
     <div class="container">
         <div class="form">
-            <form id="">
+            <form id="form-apiario-create">
                 <div class="group-row">
                     <div class="col-40">
                         <label for="">Nome</label>
-                        <input type="text"></input> 
+                        <input type="text" name="nome"></input> 
                     </div>
                     <div class="col-60">
                         <label for="">Espécie Abelhas</label>
-                        <input type="text"></input>  
+                        <input type="text" name="especie"></input>  
                     </div>
                 </div>
                 <div class="group-row">
                     <div class="col-30">
                         <label for="">População</label>
-                        <input type="text"></input> 
+                        <input type="text" name="populacao"></input> 
                     </div>
                     <div class="col-70">
                         <label for="">Apicultor</label>
-                        <input type="text"></input>  
+                        <input type="text" name="apicultor"></input>  
                     </div>
                 </div>
                 <div class="group-row">
                     <div class="col-40">
                         <label for="">Latitude</label>
-                        <input type="text"></input> 
+                        <input type="text" name="latitude"></input> 
                     </div>
                     <div class="col-60">
                         <label for="">Longitude</label>
-                        <input type="text"></input>  
+                        <input type="text" name="longitude"></input>  
                     </div>
                 </div>
                 <br>
@@ -59,7 +59,7 @@
     <div class="container">
         <div class="table">
             <div class="container">
-                <table>
+                <table id="table-apiario">
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -70,28 +70,7 @@
                         </tr>
                     </thead>
                     <tbody> 
-                        <tr>
-                            <td>Singelo Cambuí</td>
-                            <td>Abelha Gigante</td>
-                            <td>4500</td>
-                            <td>Agusto Pena</td>
-                            <td>
-                                <div class="acoes">
-                                    <button class="edit">editar</button>
-                                    <button class="delete">exluir</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Singelo Cambuí</td>
-                            <td>Abelha Gigante</td>
-                            <td>4500</td>
-                            <td>Agusto Pena</td>
-                            <td class="acoes">
-                                    <button class="edit">editar</button>
-                                    <button class="delete">exluir</button>
-                            </td>
-                        </tr>
+                        
                     </tbody>
                     
                 </table>
@@ -99,5 +78,9 @@
             </div>
         </div>
     </div>
+    <script src="../../../models/Apiario.js"></script>
+    <script src="../../../controllers/apiarioController.js"></script>
+    <script src="../../../index-apiario.js"></script>
+
 </body>
 </html>

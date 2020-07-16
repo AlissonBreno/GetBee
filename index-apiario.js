@@ -1,1 +1,1 @@
-let apiarioController = new apiarioController("form-apiario-create","form-apiario-update","table-apiario");
+let ApiarioController = new apiarioController("form-apiario-create","form-apiario-create","table-apiario");

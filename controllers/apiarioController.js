@@ -133,21 +133,21 @@ class apiarioController{
 	}
 
 	//MÉTODO QUE ADICIONA UMA NOVA LINHA NA TABELA HTML
-	addline(dataUser){ 
+	addline(dataApiario){ 
 
 		let tr = document.createElement('tr');
 		//A função JSON.stringfy serializa um objeto JSON numa string única
 		//O objeto seralizado é armazenado na API Dataset. O objeto é armazenado como
 		//string num atributo data-user no elemento HTML TR.
-		tr.dataset.user = JSON.stringify(dataUser); 
+		tr.dataset.apiario = JSON.stringify(dataApiario); 
 		//A crase ` possibilita criar um template stream, onde pode-se ter quebras de linha
 		tr.innerHTML = `
 			<tr>
-			<td>${result._nome}</td>
-			<td>${result._especie}</td>
-			<td>${result._populacao}</td>
-			<td>${result._populacao}</td>
-			<td>${result._apicultor}</td>
+			<td>${dataApiario._nome}</td>
+			<td>${dataApiario._especie}</td>
+			<td>${dataApiario._populacao}</td>
+			<td>${dataApiario._populacao}</td>
+			<td>${dataApiario._apicultor}</td>
 			<td>
 			<button type="button" class="btn btn-primary btn-edit btn-xs btn-flat">Editar</button>
 			<button type="button" class="btn btn-danger btn-xs btn-delete btn-flat">Excluir</button>
@@ -162,15 +162,14 @@ class apiarioController{
 
 	//MÉTODO QUE ADICIONA FUNCIONALIDADE AOS BOTÕES "Editar" E "Excluir"
 	addEventsTR(tr){
-		console.log(tr);
+		console.log(tr.querySelector(".btn-delete"));
 		//Quando clicar no botão de excluir de uma linha específica, esta é removida
-		tr.querySelector(".btn-delete").addEventListener('click', e=>{
-
+		tr.querySelector(".btn-delete").style.backgroundColor = "red";
+		tr.querySelector(".btn-delete").addEventListener("click", () => {
+			console.log("AAAAAAAAAAAAAAAAAAA")
 			if(confirm("Confirma a exclusão?")){
 				//A variável tr se refere a linha que possui o botão Excluir clicado
 				tr.remove();
-				//Atualiza as estatísticas
-				this.updateCount();
 			}
 		});
 		
