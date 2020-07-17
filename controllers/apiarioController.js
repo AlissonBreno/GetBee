@@ -27,7 +27,7 @@ class apiarioController{
 			let apiarioAntigo = JSON.parse(tr.dataset.apiario);
 			//Unificando no objeto result o objeto antigo userOld com os novos dados editados vindos da variável values
 			let result = Object.assign({}, apiarioAntigo, valores);      
-
+			console.log("desgraça" + result)
 			//Se a função getPhoto() retornar resolve(), entra nesta função
 			//Se utilizar o método tradicional com function dá erro no this (referência)
 			//Por isso muda-se do formato: function(content){ 
@@ -181,12 +181,12 @@ class apiarioController{
 			for(let nome in json){                
 				//Cria referência para o campo no formulário equivalente ao name (propriedade) do ojetso JSON    
 				//O replace é utilizado para a seleçao correta, uma vez que o _ só existe no JSON, e não no name dos inputs do form
-				let field = this.formUpdateEl.querySelector("[nome=" + nome.replace("_","") + "]"); 
+				let field = this.formUpdateEl.querySelector("[name=" + nome.replace("_","") + "]");
 				console.log(nome, field);               
 				//Se achou um campo correspondente no form, atribue no value do campo a propriedade JSON, porém não são todos campos que tem value
 				//Cada tipo de campo deve ser tratado de uma forma
 				if(field){
-					field.value = json[name];              
+					field.value = json[nome];              
 				}                
 			}
 			//Chamando método para mostra form de edição
