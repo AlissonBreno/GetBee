@@ -40,7 +40,6 @@ class apiarioController{
 				<td>${result._nome}</td>
 				<td>${result._especie}</td>
 				<td>${result._populacao}</td>
-				<td>${result._populacao}</td>
 				<td>${result._apicultor}</td>
 				<td>
 					<button id="btn-edit" class="edit">editar</button>
@@ -163,7 +162,7 @@ class apiarioController{
 		//Quando clicar no botão de excluir de uma linha específica, esta é removida
 		// tr.querySelector(".btn-delete").style.backgroundColor = "red";
 		tr.querySelector("#btn-delete").addEventListener("click", () => {
-			console.log("AAAAAAAAAAAAAAAAAAA")
+			
 			if(confirm("Confirma a exclusão?")){
 				//A variável tr se refere a linha que possui o botão Excluir clicado
 				tr.remove();
