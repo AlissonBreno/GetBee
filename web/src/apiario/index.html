@@ -48,6 +48,41 @@
                 <br>
                 <button class="submit" type="submit">Cadastrar</button>
             </form>
+            <form id="form-apiario-update" style="display: none; background-color: cadetblue;">
+                <div class="group-row">
+                    <div class="col-40">
+                        <label for="">Nome</label>
+                        <input type="text" name="nome"></input> 
+                    </div>
+                    <div class="col-60">
+                        <label for="">Espécie Abelhas</label>
+                        <input type="text" name="especie"></input>  
+                    </div>
+                </div>
+                <div class="group-row">
+                    <div class="col-30">
+                        <label for="">População</label>
+                        <input type="text" name="populacao"></input> 
+                    </div>
+                    <div class="col-70">
+                        <label for="">Apicultor</label>
+                        <input type="text" name="apicultor"></input>  
+                    </div>
+                </div>
+                <div class="group-row">
+                    <div class="col-40">
+                        <label for="">Latitude</label>
+                        <input type="text" name="latitude"></input> 
+                    </div>
+                    <div class="col-60">
+                        <label for="">Longitude</label>
+                        <input type="text" name="longitude"></input>  
+                    </div>
+                </div>
+                <br>
+                <br>
+                <button class="submit" type="submit">Cadastrar</button>
+            </form>
         </div>
         <div class="map-form">
             <div class="map">
@@ -58,24 +93,20 @@
     </div>
     <div class="container">
         <div class="table">
-            <div class="container">
-                <table id="table-apiario">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Espécie</th>
-                            <th>Populacao</th>
-                            <th>Apicultor</th>
-                            <th style="text-align: center;">Ação</th>
-                        </tr>
-                    </thead>
-                    <tbody> 
-                        
-                    </tbody>
-                    
-                </table>
-                    
-            </div>
+            <table id="table-apiario">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Espécie</th>
+                        <th>Populacao</th>
+                        <th>Apicultor</th>
+                        <th style="text-align: center;">Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="../../../models/Apiario.js"></script>

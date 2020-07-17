@@ -7,11 +7,9 @@
 body {
   background: #F2F3F7;
   -webkit-font-smoothing: antialiased;
-}
-
-body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--title-color);
@@ -22,8 +20,121 @@ header{
   display: flex;
   justify-content: center;
 }
-button{
+
+label{
+  color: var(--title-color);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+input{
+  height: 50px;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 50px;
+  border: none;
+  padding-left: 5%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  /* or 75% */
+
+  letter-spacing: 0.02em;
+
+  color: #A8A9B3;
+}
+
+.edit{
+  margin-right: 5%;
+  width: 70px;
+  height: 40px;
+  left: 998px;
+  top: 664px;
+
+  background: #3C6AFF;
+  border-radius: 10px;
+  border: none;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+
+  color: #F5FFFF;
+}
+
+.edit:hover{
+  margin-right: 5%;
+  width: 70px;
+  height: 40px;
+  left: 998px;
+  top: 664px;
+
   cursor: pointer;
+
+  background: #233980;
+  border-radius: 10px;
+  border: none;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+
+  color: #F5FFFF;
+}
+
+
+.delete{
+  margin-left: 5%;
+  width: 70px;
+  height: 40px;
+  left: 998px;
+  top: 664px;
+
+  background: #FE6237;
+  border-radius: 10px;
+  border: none;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+
+  color: #F5FFFF;
+}
+
+.delete:hover{
+  margin-left: 5%;
+  width: 70px;
+  height: 40px;
+  left: 998px;
+  top: 664px;
+
+  cursor: pointer;
+
+  background: #9d4026;
+  border-radius: 10px;
+  border: none;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+
+  color: #F5FFFF;
 }
 
 .container{
@@ -54,6 +165,7 @@ button{
   height: 100%;
   border-radius: 50px;
   border: none;
+  z-index: 4;
 }
 .map-shadow{
   display: block;
@@ -74,19 +186,15 @@ button{
   border-radius: 50px;
   border: none;
   margin-bottom: 10%;
-  z-index: -3;
+  /* z-index: -3; */
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
   /* height: 100%; */
   /* opacity: 10%; */
 }
 
-label{
-  color: var(--title-color);
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-}
 
 .group-row{
   display: flex;
@@ -110,23 +218,7 @@ label{
   margin-left: 43px;
 }
 
-input{
-  height: 50px;
-  width: 100%;
-  background: #FFFFFF;
-  border-radius: 50px;
-  border: none;
-  padding-left: 5%;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  /* or 75% */
 
-  letter-spacing: 0.02em;
-
-  color: #A8A9B3;
-}
 
 .submit{
   width: 100%;
@@ -143,6 +235,27 @@ input{
   color: #F2F3F7;
 
   background: #6ECC3F;
+  border: none;
+  border-radius: 50px;
+}
+
+.submit:hover{
+  width: 100%;
+  height: 50px;
+  left: 98px;
+  top: 460px;
+
+  cursor: pointer;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+
+  color: #F2F3F7;
+
+  background: #468029;
   border: none;
   border-radius: 50px;
 }
@@ -178,50 +291,5 @@ td{
   color: #A8A9B3;
 }
 
-.acoes{
-  display: flex;
-  justify-content: center;
-}
-
-.edit{
-  margin-right: 5%;
-  width: 70px;
-  height: 40px;
-  left: 998px;
-  top: 664px;
-
-  background: #3C6AFF;
-  border-radius: 10px;
-  border: none;
-
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: center;
-
-  color: #F5FFFF;
-}
 
 
-.delete{
-  margin-left: 5%;
-  width: 70px;
-  height: 40px;
-  left: 998px;
-  top: 664px;
-
-  background: #FE6237;
-  border-radius: 10px;
-  border: none;
-
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: center;
-
-  color: #F5FFFF;
-}

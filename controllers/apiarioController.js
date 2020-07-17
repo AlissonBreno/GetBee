@@ -10,7 +10,7 @@ class apiarioController{
 	}
 	//MÉTODO PARA EDIÇÃO DOS DADOS DO USUÁRIO
 	onEdit(){
-		document.querySelector("#box-apiario-update .btn-cancel").addEventListener("click", e=>{
+		document.querySelector("#form-apiario-create").addEventListener("click", e=>{
 			this.showPanelCreate();
 		});
 		this.formUpdateEl.addEventListener("submit", event => {
@@ -43,10 +43,8 @@ class apiarioController{
 				<td>${result._populacao}</td>
 				<td>${result._apicultor}</td>
 				<td>
-					<div class="acoes">
-						<button class="edit">editar</button>
-						<button class="delete">exluir</button>
-					</div>
+					<button id="btn-edit" class="edit">editar</button>
+					<button id="btn-delete" class="delete">exluir</button>
 				</td>
 			</tr> 
 			`;     
@@ -143,15 +141,14 @@ class apiarioController{
 		//A crase ` possibilita criar um template stream, onde pode-se ter quebras de linha
 		tr.innerHTML = `
 			<tr>
-			<td>${dataApiario._nome}</td>
-			<td>${dataApiario._especie}</td>
-			<td>${dataApiario._populacao}</td>
-			<td>${dataApiario._populacao}</td>
-			<td>${dataApiario._apicultor}</td>
-			<td>
-			<button type="button" class="btn btn-primary btn-edit btn-xs btn-flat">Editar</button>
-			<button type="button" class="btn btn-danger btn-xs btn-delete btn-flat">Excluir</button>
-			</td>
+				<td>${dataApiario._nome}</td>
+				<td>${dataApiario._especie}</td>
+				<td>${dataApiario._populacao}</td>
+				<td>${dataApiario._apicultor}</td>
+				<td>
+					<button id="btn-edit" class="edit">editar</button>
+					<button id="btn-delete" class="delete">exluir</button>
+				</td>
 			</tr> 
 		`;     
 		//Adiciona um ouvinte nos botões de editar e excluir
@@ -164,8 +161,8 @@ class apiarioController{
 	addEventsTR(tr){
 		console.log(tr.querySelector(".btn-delete"));
 		//Quando clicar no botão de excluir de uma linha específica, esta é removida
-		tr.querySelector(".btn-delete").style.backgroundColor = "red";
-		tr.querySelector(".btn-delete").addEventListener("click", () => {
+		// tr.querySelector(".btn-delete").style.backgroundColor = "red";
+		tr.querySelector("#btn-delete").addEventListener("click", () => {
 			console.log("AAAAAAAAAAAAAAAAAAA")
 			if(confirm("Confirma a exclusão?")){
 				//A variável tr se refere a linha que possui o botão Excluir clicado
@@ -173,7 +170,7 @@ class apiarioController{
 			}
 		});
 		
-		tr.querySelector(".btn-edit").addEventListener('click', e=>{
+		tr.querySelector("#btn-edit").addEventListener('click', e=>{
 			
 			console.log(JSON.parse(tr.dataset.apiario));
 			//Criando uma variável para armazenar o objeto JSON armazenado no atributo data-user da API dataset
@@ -200,13 +197,13 @@ class apiarioController{
 	//MÉTODO QUE MOSTRA O FORM DE CADASTRO E OCULTA O FORM DE EDIÇÃO
 	showPanelCreate(){
 	 //Ocultando formulário de edição e mostrando formulário de cadastro
-	 document.querySelector("#box-apiario-create").style.display = "block";
-	 document.querySelector("#box-apiario-update").style.display = "none";
+	 document.querySelector("#form-apiario-create").style.display = "block";
+	 document.querySelector("#form-apiario-update").style.display = "none";
 	}
 	//MÉTODO QUE MOSTRA O FORM DE EDIÇÃO E OCULTA O FORM DE CADASTRO
 	showPanelUpdate(){
 		//Ocultando formulário de cadastro e mostrando formulário de edição
-		document.querySelector("#box-apiario-create").style.display = "none";
-		document.querySelector("#box-apiario-update").style.display = "block";   
+		document.querySelector("#form-apiario-create").style.display = "none";
+		document.querySelector("#form-apiario-update").style.display = "block";   
 	}	
 } 
